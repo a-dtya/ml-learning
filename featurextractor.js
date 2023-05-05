@@ -5,6 +5,7 @@ let badge;
 let trainButton;
 let guess;
 let fevicol;
+let marker;
 function modelReady(){
     console.log("Model is ready")
 }
@@ -49,7 +50,10 @@ function setup(){
     fevicol.mousePressed(()=>{
         classifier.addImage('fevicol')
     })
-    
+    marker=createButton('marker')
+    marker.mousePressed(()=>{
+        classifier.addImage('marker')
+    })
 }
 function draw(){
     image(video,0,0,width,height)
